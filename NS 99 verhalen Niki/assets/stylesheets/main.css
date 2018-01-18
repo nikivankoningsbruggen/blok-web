@@ -1,0 +1,583 @@
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+@font-face {
+    font-family: NS Sans;
+    src: url(../fonts/nssans__-webfont.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif;
+    line-height: 1.563em;
+    background-color: #E6E6E9;
+}
+
+small {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1em;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'NS Sans';
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/*
+  ========================================
+  Login
+  ========================================
+*/
+
+.login {
+    background-color: #fff;
+    margin: 0.875em; 
+    padding-top: 0.875em;
+}
+.login h1 {
+    margin-left: 0.875em;
+    font-size: 2em;
+    line-height: 1.5em;
+    color: #003082;
+}
+.login form fieldset {
+    background-color: #ffc917;
+    margin: 0.875em;  
+    padding: 1em;
+    border: none;
+    color: #003082;
+}
+.login h2 {
+    font-size: 1.25em;
+    margin-bottom:1.5em;
+}
+.login form fieldset div {
+    margin-bottom: 1em;
+}
+.login form fieldset div input {
+    -webkit-appearance: none;
+    margin-top: 0.5em;
+    display: block;
+    width: 100%;
+    padding: 0.875em;
+    border: none;
+    font-size: 0.750em;
+    font-family: 'NS Sans';
+}
+.login form fieldset input[type="password"]:valid,
+input[type="email"]:valid,
+input[type="text"]:valid{
+    border: 0.15em solid rgb(0,139,0);
+}
+.login form fieldset input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="text"]:focus{
+    background-color: beige;
+    box-shadow:  0 0.125rem 0 0 rgba(7,7,33,.15);
+}
+
+section.login form fieldset p {
+    display: none;
+    color: rgb(0,139,0);
+}
+section.login form fieldset:valid p {
+    display: block;
+}
+form .btn {
+    margin-top: 0.5em;
+    width: 7.5em;
+    height: 2.8125em;
+    border: none;
+    background-color: #0079d3;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'NS Sans';
+    background-image: url(/assets/images/pijlrechtswit.svg);
+    background-repeat:no-repeat;
+    background-position: right;
+    padding-right: 1.6em;
+    box-shadow: inset 0 -0.125rem 0 #005ca0;
+    transition: box-shadow .15s ease-in-out;
+}
+form .btn:hover {
+    background-color: #005ca0;
+    transition: all 0.3s;
+    }
+section.login a.btn {
+    margin-left: 2em;
+}
+
+
+
+/*
+  ========================================
+  Header
+  ========================================
+*/
+
+header nav {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 0.125rem 0 0 rgba(7,7,33,.15);
+    width: 100%;
+    height: 4.3em;
+}
+nav ul {
+  display: flex;
+  padding: 1.125rem .875em 1.0625em; 
+}
+nav li:first-child {
+  margin-right: auto; /* zorgt dat de eerste li links staat */
+}
+nav ul li a {
+    display: flex;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    padding-top: 0.1em; 
+}
+nav ul li a img {
+    width: 2.5em;
+    height: 2em;
+}
+nav ul li:nth-child(1) {
+    display: inline-flex; /* Maakt de container inline? */
+}
+a h1 {
+    padding-top: 0.2em; /* tekst uitlijnen met logo */
+    margin-left: 0.5em;
+}
+nav ul li p{
+    display: none;
+    padding-right: 1em;
+}
+
+
+
+/* Bookmark */
+
+header nav ul li:nth-last-of-type(3) div a{
+    position: relative
+}
+.bookmark1{
+    position: absolute;
+    right: .3em;
+    width: 1em;
+    top: -.7em;
+    opacity: 0;
+    transition: all .3s;
+}
+.bookmarksaved{
+    opacity: 1;
+}
+
+
+
+@media (min-width:60.63em){
+    nav ul li p{
+        display: block;
+        padding-top: .4em;
+}
+    .bookmark1{
+        right: 6.5em;
+    }
+}
+
+
+/*
+  ========================================
+    Titels
+  ========================================
+*/
+
+main section h2:first-child {
+    display: none;
+}
+main section:nth-of-type(2) h2:first-child {
+    display: block;
+}
+main section h2 {
+    background: rgba(0,48,130,.8);
+    width: 66.6%;
+    padding: 1em;
+    color: #fff;
+}
+
+
+
+@media (min-width:32em) and (max-width: 60.62em){
+    main section h2:first-child {
+    display: block;
+}
+    main section h2:nth-of-type(2) {
+        display: none;
+    }
+}
+@media (min-width:60.63em){
+    main section h2:first-child {
+    display: block;
+}
+    main section h2:nth-of-type(2) {
+        display: none;
+    }
+}
+
+
+
+/*
+  ========================================
+  Filter en sorteer functies
+  ========================================
+*/
+
+/* Filter*/ 
+
+aside form > fieldset {
+    display: none;
+    position: absolute;
+    color: #003082;
+    border: none;
+    background-color: #0079d3;
+    padding: 1em;
+    color: #fff;
+    z-index: 1;
+}
+aside form > fieldset.open {
+    display: flex;
+    margin: 0.3em 1em;
+    box-shadow: 0 0.125em 0 0 rgba(7,7,33,.15);
+    width: 12em;
+}
+aside form fieldset fieldset{
+    border: none;
+}
+aside form > fieldset input[type='checkbox'] {
+    display: inline-block;
+    width: 4em;
+    height: 1.5em; 
+    margin: 0 1em 0 0;
+}
+aside form a {
+    background-image: url(/assets/images/pijlbenedenwit.svg)!important;
+    background-repeat:no-repeat;
+    background-position: right;
+    margin: 0 1em ; 
+    padding: 0.45em 2em;
+}
+
+/* Sorteer */
+
+select {
+    -webkit-appearance:none;
+    background-image: url(/assets/images/pijlbeneden.svg);
+    background-repeat:no-repeat;
+    background-position: right;
+    width:10em;
+    padding:0.5em 1em;
+    font-family: 'NS Sans';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #003082;
+    border-color: #ffc917;
+    border-radius:0 ;
+    background-color:#ffc917;
+}
+
+
+@media (min-width:60.63em){
+    aside form a {
+    margin-left: 5.5em;
+}
+
+}
+
+
+/*
+  ========================================
+    Articles
+  ========================================
+*/
+
+article {
+    background-color: #fff;
+    margin: 1em;
+    padding-bottom: 2em;
+    margin-top: 3em;
+    box-shadow: 0 0.125rem 0 0 rgba(7,7,33,.15);
+    min-width: 20em;
+    position: relative;
+}
+
+/*
+  ========================================
+    Carrousel
+    Bron: https://medium.com/flexbox-and-grids/how-to-create-horizontally-scrollable-sections-with-flexbox-60d860f539b2
+  ========================================
+*/
+
+#carrousel {
+  display: flex;
+  overflow-x: scroll;
+}
+#carrousel::-webkit-scrollbar {
+  display: none;
+}
+#carrousel .card{
+    margin: 1em;
+    min-width: 20em;
+}
+#carrousel .card:nth-child(3){
+    margin-right: 1em;
+}
+
+/*
+  ========================================
+    Articles
+  ========================================
+*/
+
+/* bookmark */
+
+section div article header img {
+    width: 100%;
+    height: 8.5em;
+}
+article button.bookmark {
+    position:absolute;
+    background-color: #ffc917;
+    border: none;
+    right: 1em;
+    top: -1em;
+}
+article button.bookmark img {
+    width: 4em;
+    height: 4em;
+    margin: 1em;
+}
+
+
+section div header h3{
+    margin: 1.5em 2em 0 1.7em;
+    font-size: 1.250em;
+    line-height: 1.250em;
+}
+section div article header div {
+    display: flex;
+    margin: 0 2em;
+    line-height: 1.8em;
+}
+section div article header div img {
+    width: 1.5em;
+    height: 1.5em;
+    padding-right: 0.5em;
+}
+section div article header div small:nth-child(2) {
+   margin-right: 2em;
+}
+
+
+section div article div p{
+    margin: 0.5em 2em;
+    font-size: 1em;
+    line-height: 1.8em;
+}
+
+
+/* Link states */
+
+section div article a{
+    display: flex;
+    text-decoration: none;
+    margin: 0 2em 0 2em;
+}
+section div article a p:active{
+    margin-left: 0.1em;
+}
+section div article a p:hover{
+    color: #003082;
+}
+section div article a img {
+    width: 1.5em;
+    height: 1.5em;
+}
+section div article a p {
+    color: #0079d3;
+    line-height: 1.8em;
+}
+
+
+
+section div article footer {
+    display: flex;
+    margin: 0 2em;
+}
+section div article footer small {
+    margin-right: 0.5em;
+}
+section div article footer img {
+    width: 1em;
+    height: 1.5em;
+}
+section div article footer button img {
+    width: 1.5em;
+    height: 1.5em;
+}
+section div article footer button {
+     -webkit-appearance:none;
+    border: none;
+    margin-right: 2em;  
+}
+
+/* Als de gebruiker op het hartje klikt word deze class toegevoegd aan de img */
+
+section div article footer button.like img.fill {
+    background-image: url(/assets/images/heartfill.svg);
+    background-repeat: no-repeat; 
+}
+
+
+
+@media (min-width:32em) and (max-width: 60.62em){
+    .articles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media (min-width:60.63em){
+    .articles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    div.articles,
+    main section div#carrousel{
+        margin: 0 4.5em 0 4.5em;
+    }
+
+}
+
+
+
+/*
+  ========================================
+  Verhalen pagina's
+  ========================================
+*/
+
+main > img {
+    display: none;
+}
+main > img:first-child {
+    display: block;
+    width: 100%;
+    }
+
+@media (min-width: 32em) and (max-width: 60.62em) {
+    main > img:first-child {
+    display: none;
+}
+    main > img:nth-of-type(2) {
+    display: block;
+    width: 100%;
+}
+}
+@media (min-width: 60.63em) {
+    main > img:first-child {
+    display: none;
+}
+    main > img:nth-of-type(2) {
+    display: none;
+}
+    main > img:nth-of-type(3) {
+    display: block;
+    width: 100%;
+    }
+}
+
+/*
+  ========================================
+  Verhalen input
+  ========================================
+*/
+
+main section.waardering h2 {
+    display: block;
+    padding: 0;
+    background: none;
+    color: #003082;
+}
+section.waardering form {
+    background-color: #ffc917;
+    padding: 1em;
+    margin: 1em;
+}
+section.waardering form fieldset {
+    -webkit-appearance:none;
+    border: none;
+    color: #003082;
+    display: flex;
+}
+section.waardering form fieldset input, textarea{
+    -webkit-appearance:none;
+    border: none;
+    color: #003082;
+    display: flex;
+    padding: 1em;
+    width: 100%;
+    margin-top:0.5em;
+    font-family: 'NS Sans';
+    font-size: 0.750em
+}
+section.waardering form fieldset textarea{
+    height: 10em;
+}
+section.waardering form fieldset div:nth-of-type(1) {
+    margin: 2em 0 1em 0;
+}
+section.waardering form fieldset button {
+    width: 13em;
+    margin-top: 2em;
+}
+.loading {
+    display: inline-block;
+   opacity: 0;
+    transition: all .3s;
+    width: 3em;   
+}
+.loadingshow{
+    opacity: 1;
+}
+form fieldset a#berichtplaatsen {
+    margin-top: 2em;
+    padding: 0.7em 0 0 2em;
+    width: 12em;
+}

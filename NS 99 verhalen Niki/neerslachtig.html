@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neerslachtig</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+</head>
+<body>
+   
+    <header>
+        <nav>
+           
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img class="nslogo" src="assets/images/ns.svg" alt="Logo Nederlandse Spoorwegen">
+                        <h1>99 verhalen</h1>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href=""><img src="assets/images/zoeken.svg" alt="Zoek icoon">             
+                        <p>Zoeken</p>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="likes.html">
+                        <img src="assets/images/bookmark.svg" alt="Likes icoon"><p>Opgeslagen</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <img src="assets/images/profiel.svg" alt="Account icoon">
+                        <p>Profiel</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <img src="assets/images/english.svg" alt="Engelse vlag icoon"><p>English</p>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+    
+    <main>
+        <img src="assets/images/NeerslachtigMobile.png" alt="verhaal">
+        <img src="assets/images/neerslachtigtablet.png" alt="verhaal">
+        <img src="assets/images/neerslachtigdesktop.png" alt="verhaal">
+        
+        <section class="waardering"> 
+        
+        <form action="#">
+            <fieldset>
+                <h2>Plaats uw bericht</h2>
+                <div>
+                    <label for="title">Titel</label>
+                    <input id="title" type="text" name="title" placeholder="Titel bericht" required>
+                </div>
+               
+                <div>
+                    <label for="bericht">Bericht</label>
+                    <textarea id="bericht" name="bericht" placeholder="Typ hier uw bericht"
+                    ></textarea>
+                </div>
+
+                <a class="btn" id="berichtplaatsen">Bericht plaatsen</a>
+                <img class="loading" src="assets/images/refresh.svg" alt="loading">
+            </fieldset>
+        </form>
+        </section>
+    </main>
+    
+    <script src="assets/js/verhaal.js"></script>
+    
+    
+    
+</body>
+</html>
